@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "u+011w/4cT5awzvSqZmmhQVXJ/jfz0wrJ4ROdEHzGIs=",
+  "Source": "grpc_with_C#",
+  "BasePath": "_content/grpc_with_C#",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
