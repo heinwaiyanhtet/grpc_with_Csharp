@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hein/Desktop/current_testing_projects/grpc_with_C#/grpc_with_C#.csproj": {}
+    "/home/hein/Desktop/grpc_with_C#/grpc_with_C#.csproj": {}
   },
   "projects": {
-    "/home/hein/Desktop/current_testing_projects/grpc_with_C#/grpc_with_C#.csproj": {
+    "/home/hein/Desktop/grpc_with_C#/grpc_with_C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hein/Desktop/current_testing_projects/grpc_with_C#/grpc_with_C#.csproj",
+        "projectUniqueName": "/home/hein/Desktop/grpc_with_C#/grpc_with_C#.csproj",
         "projectName": "grpc_with_C#",
-        "projectPath": "/home/hein/Desktop/current_testing_projects/grpc_with_C#/grpc_with_C#.csproj",
+        "projectPath": "/home/hein/Desktop/grpc_with_C#/grpc_with_C#.csproj",
         "packagesPath": "/home/hein/.nuget/packages/",
-        "outputPath": "/home/hein/Desktop/current_testing_projects/grpc_with_C#/obj/",
+        "outputPath": "/home/hein/Desktop/grpc_with_C#/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hein/.nuget/NuGet/NuGet.Config"

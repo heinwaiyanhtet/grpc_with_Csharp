@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace grpc_with_C_ {
-  /// <summary>
-  /// The greeting service definition.
-  /// </summary>
   public static partial class Greeter
   {
     static readonly string __ServiceName = "greet.Greeter";
