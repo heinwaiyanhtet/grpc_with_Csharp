@@ -8,10 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace BlogGrpc {
-  /// <summary>
-  /// Sends a greeting
-  ///   rpc SayHello (HelloRequest) returns (HelloReply);
-  /// </summary>
   public static partial class Blogger
   {
     static readonly string __ServiceName = "blog.Blogger";

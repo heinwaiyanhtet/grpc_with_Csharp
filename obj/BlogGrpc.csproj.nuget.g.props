@@ -18,6 +18,7 @@
     <Import Project="$(NuGetPackageRoot)grpc.tools/2.40.0/build/Grpc.Tools.props" Condition="Exists('$(NuGetPackageRoot)grpc.tools/2.40.0/build/Grpc.Tools.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/home/hein/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.10</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">/home/hein/.nuget/packages/grpc.tools/2.40.0</PkgGrpc_Tools>
   </PropertyGroup>
 </Project>

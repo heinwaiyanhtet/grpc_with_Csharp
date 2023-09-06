@@ -11,5 +11,4 @@ public class BloggerService : Blogger.BloggerBase
         _logger = logger;   
     }
 
-
 }

@@ -1,11 +1,14 @@
-namespace ToDoGrpc.Data;
+using BlogGrpc.Models;
+namespace BlogGrpc.Data;
+using Microsoft.EntityFrameworkCore;
 
-// public class AppDbContext : DbContext
-// {
-//     // public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-//     // {
+public class DataContext : DbContext
+{
+     public DataContext(DbContextOptions<DataContext> options) : base(options)
+    {
         
-//     // }
+    }
 
-//     public DbSet<Blog> Blogs { get; set; } = default!;
-// }
+    public DbSet<Blog> Blogs => Set<Blog>();
+
+}

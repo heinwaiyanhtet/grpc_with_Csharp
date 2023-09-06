@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lXwGiNWthABVuhMhVjAgjTRVw7RISzSbs8VdM53j2xiVO+VZjeUTHEg8yxRJ8rFWTyG0ciwZ5xviw5tvwmJtdg==",
+  "dgSpecHash": "5lRH5ppqziw+zWDIIMwMJSD9SdvRNKeFA7/oH2X5go24alHwrqet7wLcmh1sKKVaHK7T9mG8d7tyTfapdgeCKw==",
   "success": true,
   "projectFilePath": "/home/hein/Desktop/grpc_with_C#/BlogGrpc.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "/home/hein/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.10/microsoft.entityframeworkcore.relational.7.0.10.nupkg.sha512",
     "/home/hein/.nuget/packages/microsoft.entityframeworkcore.sqlite/7.0.10/microsoft.entityframeworkcore.sqlite.7.0.10.nupkg.sha512",
     "/home/hein/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/7.0.10/microsoft.entityframeworkcore.sqlite.core.7.0.10.nupkg.sha512",
+    "/home/hein/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.10/microsoft.entityframeworkcore.tools.7.0.10.nupkg.sha512",
     "/home/hein/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/home/hein/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/home/hein/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
