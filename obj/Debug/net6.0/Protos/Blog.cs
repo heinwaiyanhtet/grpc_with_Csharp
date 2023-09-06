@@ -9,26 +9,30 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-/// <summary>Holder for reflection information generated from Protos/blog.proto</summary>
-public static partial class BlogReflection {
+namespace BlogGrpc {
 
-  #region Descriptor
-  /// <summary>File descriptor for Protos/blog.proto</summary>
-  public static pbr::FileDescriptor Descriptor {
-    get { return descriptor; }
+  /// <summary>Holder for reflection information generated from Protos/blog.proto</summary>
+  public static partial class BlogReflection {
+
+    #region Descriptor
+    /// <summary>File descriptor for Protos/blog.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
+    }
+    private static pbr::FileDescriptor descriptor;
+
+    static BlogReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "ChFQcm90b3MvYmxvZy5wcm90bxIEYmxvZzIJCgdCbG9nZ2VyQguqAghCbG9n",
+            "R3JwY2IGcHJvdG8z"));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { },
+          new pbr::GeneratedClrTypeInfo(null, null, null));
+    }
+    #endregion
+
   }
-  private static pbr::FileDescriptor descriptor;
-
-  static BlogReflection() {
-    byte[] descriptorData = global::System.Convert.FromBase64String(
-        string.Concat(
-          "ChFQcm90b3MvYmxvZy5wcm90bw=="));
-    descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { },
-        new pbr::GeneratedClrTypeInfo(null, null, null));
-  }
-  #endregion
-
 }
 
 #endregion Designer generated code

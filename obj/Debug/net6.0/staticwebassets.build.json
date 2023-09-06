@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "u+011w/4cT5awzvSqZmmhQVXJ/jfz0wrJ4ROdEHzGIs=",
-  "Source": "grpc_with_C#",
-  "BasePath": "_content/grpc_with_C#",
+  "Hash": "0jO1wZkahyokLDKVRGIu1lX5d/j4x0KnyNCN4oYM4mw=",
+  "Source": "BlogGrpc",
+  "BasePath": "_content/BlogGrpc",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

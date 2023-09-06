@@ -27,3 +27,12 @@
 /home/hein/Desktop/current_testing_projects/grpc_with_C#/obj/Debug/net6.0/ref/grpc_with_C#.dll
 /home/hein/Desktop/current_testing_projects/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.pdb
 /home/hein/Desktop/current_testing_projects/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.genruntimeconfig.cache
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.csproj.AssemblyReference.cache
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.dll
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/ref/grpc_with_C#.dll
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.pdb
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.AssemblyInfoInputs.cache
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.AssemblyInfo.cs
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.csproj.CoreCompileInputs.cache
+/home/hein/Desktop/grpc_with_C#/obj/Debug/net6.0/grpc_with_C#.MvcApplicationPartsAssemblyInfo.cache
