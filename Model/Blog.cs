@@ -7,7 +7,7 @@ public class Blog
 {
     [Key]
     public int Id {get;set;}
-
+    
     [Required]
     [MaxLength(255)]
     [MinLength(4)]

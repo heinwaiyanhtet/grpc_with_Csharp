@@ -13,7 +13,8 @@ service Blogger {
 message CreateBlogRequest {
     string Title = 1;
     string Description = 2;
-    string Author = 3;
+    string ImageUrl = 3;
+    string Author = 4;
 }
 
 message CreateBlogResponse {

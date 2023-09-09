@@ -24,18 +24,18 @@ namespace BlogGrpc {
     static BlogReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQcm90b3MvYmxvZy5wcm90bxIEYmxvZyJHChFDcmVhdGVCbG9nUmVxdWVz",
-            "dBINCgVUaXRsZRgBIAEoCRITCgtEZXNjcmlwdGlvbhgCIAEoCRIOCgZBdXRo",
-            "b3IYAyABKAkiIAoSQ3JlYXRlQmxvZ1Jlc3BvbnNlEgoKAklkGAEgASgFIg8K",
-            "DWdldEFsbFJlcXVlc3QiEAoOZ2V0QWxsUmVzcG9uc2UygQEKB0Jsb2dnZXIS",
-            "PwoKQ3JlYXRlQmxvZxIXLmJsb2cuQ3JlYXRlQmxvZ1JlcXVlc3QaGC5ibG9n",
-            "LkNyZWF0ZUJsb2dSZXNwb25zZRI1CghMaXN0QmxvZxITLmJsb2cuZ2V0QWxs",
-            "UmVxdWVzdBoULmJsb2cuZ2V0QWxsUmVzcG9uc2VCC6oCCEJsb2dHcnBjYgZw",
-            "cm90bzM="));
+            "ChFQcm90b3MvYmxvZy5wcm90bxIEYmxvZyJZChFDcmVhdGVCbG9nUmVxdWVz",
+            "dBINCgVUaXRsZRgBIAEoCRITCgtEZXNjcmlwdGlvbhgCIAEoCRIQCghJbWFn",
+            "ZVVybBgDIAEoCRIOCgZBdXRob3IYBCABKAkiIAoSQ3JlYXRlQmxvZ1Jlc3Bv",
+            "bnNlEgoKAklkGAEgASgFIg8KDWdldEFsbFJlcXVlc3QiEAoOZ2V0QWxsUmVz",
+            "cG9uc2UygQEKB0Jsb2dnZXISPwoKQ3JlYXRlQmxvZxIXLmJsb2cuQ3JlYXRl",
+            "QmxvZ1JlcXVlc3QaGC5ibG9nLkNyZWF0ZUJsb2dSZXNwb25zZRI1CghMaXN0",
+            "QmxvZxITLmJsb2cuZ2V0QWxsUmVxdWVzdBoULmJsb2cuZ2V0QWxsUmVzcG9u",
+            "c2VCC6oCCEJsb2dHcnBjYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::BlogGrpc.CreateBlogRequest), global::BlogGrpc.CreateBlogRequest.Parser, new[]{ "Title", "Description", "Author" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::BlogGrpc.CreateBlogRequest), global::BlogGrpc.CreateBlogRequest.Parser, new[]{ "Title", "Description", "ImageUrl", "Author" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::BlogGrpc.CreateBlogResponse), global::BlogGrpc.CreateBlogResponse.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::BlogGrpc.getAllRequest), global::BlogGrpc.getAllRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::BlogGrpc.getAllResponse), global::BlogGrpc.getAllResponse.Parser, null, null, null, null, null)
@@ -76,6 +76,7 @@ namespace BlogGrpc {
     public CreateBlogRequest(CreateBlogRequest other) : this() {
       title_ = other.title_;
       description_ = other.description_;
+      imageUrl_ = other.imageUrl_;
       author_ = other.author_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -107,8 +108,19 @@ namespace BlogGrpc {
       }
     }
 
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 3;
+    private string imageUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUrl {
+      get { return imageUrl_; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "Author" field.</summary>
-    public const int AuthorFieldNumber = 3;
+    public const int AuthorFieldNumber = 4;
     private string author_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Author {
@@ -133,6 +145,7 @@ namespace BlogGrpc {
       }
       if (Title != other.Title) return false;
       if (Description != other.Description) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       if (Author != other.Author) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -142,6 +155,7 @@ namespace BlogGrpc {
       int hash = 1;
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (Author.Length != 0) hash ^= Author.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,8 +181,12 @@ namespace BlogGrpc {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (Author.Length != 0) {
+      if (ImageUrl.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(ImageUrl);
+      }
+      if (Author.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(Author);
       }
       if (_unknownFields != null) {
@@ -188,8 +206,12 @@ namespace BlogGrpc {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (Author.Length != 0) {
+      if (ImageUrl.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(ImageUrl);
+      }
+      if (Author.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(Author);
       }
       if (_unknownFields != null) {
@@ -206,6 +228,9 @@ namespace BlogGrpc {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (Author.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Author);
@@ -226,6 +251,9 @@ namespace BlogGrpc {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       if (other.Author.Length != 0) {
         Author = other.Author;
@@ -253,6 +281,10 @@ namespace BlogGrpc {
             break;
           }
           case 26: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 34: {
             Author = input.ReadString();
             break;
           }
@@ -279,6 +311,10 @@ namespace BlogGrpc {
             break;
           }
           case 26: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 34: {
             Author = input.ReadString();
             break;
           }
