@@ -18,10 +18,7 @@ public class BloggerService : Blogger.BloggerBase
 
         if(request.Title == string.Empty || request.Description == string.Empty)
             throw new RpcException(new Status(StatusCode.InvalidArgument, "You must suppply a valid object"));
-
         
-
-
          return await Task.FromResult(new CreateBlogResponse
         {
             Id = 1,

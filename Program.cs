@@ -1,4 +1,6 @@
+using BlogGrpc.Data;
 using BlogGrpc.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
 
 // Add services to the container.
+
+builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlite("Data Source=blogDb.db"));
 
 builder.Services.AddGrpc();
 
