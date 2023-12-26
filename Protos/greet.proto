@@ -11,10 +11,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
+
 // The request message containing the user's name.
 message HelloRequest {
   string name = 1;
 }
+
 
 // The response message containing the greetings.
 message HelloReply {

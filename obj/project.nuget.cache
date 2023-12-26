@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5lRH5ppqziw+zWDIIMwMJSD9SdvRNKeFA7/oH2X5go24alHwrqet7wLcmh1sKKVaHK7T9mG8d7tyTfapdgeCKw==",
+  "dgSpecHash": "TGzDzqpF4Cm/dh2gsFuSmBjV0ec+CM20F9kznSdCbMvQqaB8Jn/8RhtoEbBJKeVbXBKrvP6gDGglMWXhZhpenQ==",
   "success": true,
-  "projectFilePath": "/home/hein/Desktop/grpc_with_C#/BlogGrpc.csproj",
+  "projectFilePath": "/home/hein/Desktop/grpc_with_Csharp/BlogGrpc.csproj",
   "expectedPackageFiles": [
     "/home/hein/.nuget/packages/google.protobuf/3.18.0/google.protobuf.3.18.0.nupkg.sha512",
     "/home/hein/.nuget/packages/grpc.aspnetcore/2.40.0/grpc.aspnetcore.2.40.0.nupkg.sha512",

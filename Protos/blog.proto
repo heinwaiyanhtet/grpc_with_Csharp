@@ -1,9 +1,10 @@
 syntax = "proto3";
+import "google/protobuf/empty.proto";
 option csharp_namespace = "BlogGrpc";
 package blog;
 
 service Blogger {
-    
+
     rpc CreateBlog(CreateBlogRequest) returns (CreateBlogResponse);
 
     rpc ListBlog(getAllRequest) returns (getAllResponse);
@@ -23,7 +24,15 @@ message CreateBlogResponse {
 
 message getAllRequest{}
 
-message getAllResponse{
+message getAllResponse
+{
+    repeated BlogInfo Blogs = 1;
+}
 
-
+message BlogInfo
+{
+    string Title = 1;
+    string Description = 2;
+    string ImageUrl = 3;
+    string Author = 4;
 }

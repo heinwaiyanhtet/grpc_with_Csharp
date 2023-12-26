@@ -18,4 +18,11 @@ public class GreeterService : Greeter.GreeterBase
             Message = "Hello " + request.Name
         });
     }
+
+
+
+    // public class HelloReply
+    // {
+    //     public string Message {get;set;}
+    // }
 }

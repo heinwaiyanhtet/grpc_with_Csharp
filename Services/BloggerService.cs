@@ -3,6 +3,7 @@ using BlogGrpc;
 using BlogGrpc.Data;
 using BlogGrpc.Models;
 using Microsoft.EntityFrameworkCore;
+using Google.Protobuf.WellKnownTypes;
 namespace BlogGrpc.Services;
 
 public class BloggerService : Blogger.BloggerBase
@@ -19,44 +20,47 @@ public class BloggerService : Blogger.BloggerBase
     {
 
         if(request.Title == string.Empty || request.Description == string.Empty)
+
             throw new RpcException(new Status(StatusCode.InvalidArgument, "You must suppply a valid object"));
 
-        var blog = new Blog
-        {
-            Title = request.Title,
-            Author = request.Author,
-            ImageUrl  = request.ImageUrl,
-            Description = request.Description
-        };
+            var blog = new Blog
+            {
+                Title = request.Title,
+                Author = request.Author,
+                ImageUrl  = request.ImageUrl,
+                Description = request.Description
+            };
 
-        await _db.AddAsync(blog);
-        await  _db.SaveChangesAsync();
+            await _db.AddAsync(blog);
+            await  _db.SaveChangesAsync();
 
-
-        return await Task.FromResult(new CreateBlogResponse
-        {
-            Id = 1,
-        });
+            return await Task.FromResult(new CreateBlogResponse
+            {
+                Id = 1,
+            });
 
     }
 
-     public override async Task<getAllResponse> ListBlog(getAllRequest request, ServerCallContext context)
+     public override async Task<getAllResponse> ListBlog (getAllRequest request, ServerCallContext context)
     {
         var response = new getAllResponse();
-
+        
         var blogs = await _db.Blogs.ToListAsync();
 
         foreach(var blog in blogs)
         {
-            // response.ToDo.Add(new ReadToDoResponse{
-            //     Id = toDo.Id,
-            //     Title = toDo.Title,
-            //     Description = toDo.Description,
-            //     ToDoStatus = toDo.ToDoStatus
-            // });
-        }
+            var blogInfo = new BlogInfo
+            {
+                Title = blog.Title,
+                Author = blog.Author,
+                ImageUrl  = blog.ImageUrl,
+                Description = blog.Description
+            };
+          response.Blogs.Add(blogInfo);
 
-        return await Task.FromResult(response);
+        }
+        return response;        
     }
+
 
 }
