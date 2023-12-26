@@ -38,8 +38,8 @@ public class BloggerService : Blogger.BloggerBase
             {
                 Id = 1,
             });
-
     }
+
 
      public override async Task<getAllResponse> ListBlog (getAllRequest request, ServerCallContext context)
     {
@@ -88,6 +88,24 @@ public class BloggerService : Blogger.BloggerBase
 
     }
 
+    public override async Task<DeleteBlogResponse> DeleteBlog (DeleteBlogRequest request,ServerCallContext context)
+    {
+        var blog = await _db.Blogs.FindAsync(request.Id);
 
+        if(blog == null)
+        {
+            throw new RpcException(new Status(StatusCode.NotFound, $"Blog with ID {request.Id} not found"));
+        }
+
+         _db.Blogs.Remove(blog);
+         await _db.SaveChangesAsync();
+
+         return new DeleteBlogResponse
+         {
+            Success = true,
+         };
+    }
+
+    
 
 }

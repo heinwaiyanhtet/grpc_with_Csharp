@@ -8,7 +8,7 @@ service Blogger {
     rpc CreateBlog(CreateBlogRequest) returns (CreateBlogResponse);
     rpc ListBlog(getAllRequest) returns (getAllResponse);
     rpc GetBlogById(GetBlogByIdRequest) returns (GetBlogByIdResponse);
-
+    rpc DeleteBlog(DeleteBlogRequest) returns (DeleteBlogResponse);
 }
 
 message CreateBlogRequest {
@@ -45,4 +45,14 @@ message GetBlogByIdRequest
 message GetBlogByIdResponse
 {
     BlogInfo Blog = 1;
+}
+
+message DeleteBlogRequest
+{
+    int32 Id = 1;
+}
+
+message DeleteBlogResponse
+{
+    bool Success = 1;
 }
