@@ -61,6 +61,10 @@ namespace BlogGrpc {
     static readonly grpc::Marshaller<global::BlogGrpc.DeleteBlogRequest> __Marshaller_blog_DeleteBlogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.DeleteBlogRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::BlogGrpc.DeleteBlogResponse> __Marshaller_blog_DeleteBlogResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.DeleteBlogResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BlogGrpc.UpdateBlogRequest> __Marshaller_blog_UpdateBlogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.UpdateBlogRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BlogGrpc.UpdateBlogResponse> __Marshaller_blog_UpdateBlogResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.UpdateBlogResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::BlogGrpc.CreateBlogRequest, global::BlogGrpc.CreateBlogResponse> __Method_CreateBlog = new grpc::Method<global::BlogGrpc.CreateBlogRequest, global::BlogGrpc.CreateBlogResponse>(
@@ -93,6 +97,14 @@ namespace BlogGrpc {
         "DeleteBlog",
         __Marshaller_blog_DeleteBlogRequest,
         __Marshaller_blog_DeleteBlogResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::BlogGrpc.UpdateBlogRequest, global::BlogGrpc.UpdateBlogResponse> __Method_UpdateBlog = new grpc::Method<global::BlogGrpc.UpdateBlogRequest, global::BlogGrpc.UpdateBlogResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBlog",
+        __Marshaller_blog_UpdateBlogRequest,
+        __Marshaller_blog_UpdateBlogResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -128,6 +140,12 @@ namespace BlogGrpc {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::BlogGrpc.UpdateBlogResponse> UpdateBlog(global::BlogGrpc.UpdateBlogRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -139,7 +157,8 @@ namespace BlogGrpc {
           .AddMethod(__Method_CreateBlog, serviceImpl.CreateBlog)
           .AddMethod(__Method_ListBlog, serviceImpl.ListBlog)
           .AddMethod(__Method_GetBlogById, serviceImpl.GetBlogById)
-          .AddMethod(__Method_DeleteBlog, serviceImpl.DeleteBlog).Build();
+          .AddMethod(__Method_DeleteBlog, serviceImpl.DeleteBlog)
+          .AddMethod(__Method_UpdateBlog, serviceImpl.UpdateBlog).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -153,6 +172,7 @@ namespace BlogGrpc {
       serviceBinder.AddMethod(__Method_ListBlog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.getAllRequest, global::BlogGrpc.getAllResponse>(serviceImpl.ListBlog));
       serviceBinder.AddMethod(__Method_GetBlogById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.GetBlogByIdRequest, global::BlogGrpc.GetBlogByIdResponse>(serviceImpl.GetBlogById));
       serviceBinder.AddMethod(__Method_DeleteBlog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.DeleteBlogRequest, global::BlogGrpc.DeleteBlogResponse>(serviceImpl.DeleteBlog));
+      serviceBinder.AddMethod(__Method_UpdateBlog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.UpdateBlogRequest, global::BlogGrpc.UpdateBlogResponse>(serviceImpl.UpdateBlog));
     }
 
   }

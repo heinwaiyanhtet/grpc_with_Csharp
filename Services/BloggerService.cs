@@ -106,6 +106,28 @@ public class BloggerService : Blogger.BloggerBase
          };
     }
 
-    
+     public override async Task<UpdateBlogResponse> UpdateBlog(UpdateBlogRequest request,ServerCallContext context)
+    {
+            var blog = await _db.Blogs.FindAsync(request.Blog.Id);
+
+            if(blog == null)
+            {
+                throw new RpcException(new Status(StatusCode.NotFound, $"Blog with ID {request.Blog.Id} not found"));
+            }
+
+             blog.Title = request.Blog.Blog.Title;
+             blog.Description = request.Blog.Blog.Description;
+             blog.ImageUrl = request.Blog.Blog.ImageUrl;
+             blog.Author = request.Blog.Blog.Author;
+
+              await _db.SaveChangesAsync();
+
+            return new UpdateBlogResponse
+            {
+                Success = true,
+            };
+    }
+
+
 
 }
