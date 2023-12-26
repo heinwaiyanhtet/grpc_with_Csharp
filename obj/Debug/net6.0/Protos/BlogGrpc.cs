@@ -53,6 +53,10 @@ namespace BlogGrpc {
     static readonly grpc::Marshaller<global::BlogGrpc.getAllRequest> __Marshaller_blog_getAllRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.getAllRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::BlogGrpc.getAllResponse> __Marshaller_blog_getAllResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.getAllResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BlogGrpc.GetBlogByIdRequest> __Marshaller_blog_GetBlogByIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.GetBlogByIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BlogGrpc.GetBlogByIdResponse> __Marshaller_blog_GetBlogByIdResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BlogGrpc.GetBlogByIdResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::BlogGrpc.CreateBlogRequest, global::BlogGrpc.CreateBlogResponse> __Method_CreateBlog = new grpc::Method<global::BlogGrpc.CreateBlogRequest, global::BlogGrpc.CreateBlogResponse>(
@@ -69,6 +73,14 @@ namespace BlogGrpc {
         "ListBlog",
         __Marshaller_blog_getAllRequest,
         __Marshaller_blog_getAllResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::BlogGrpc.GetBlogByIdRequest, global::BlogGrpc.GetBlogByIdResponse> __Method_GetBlogById = new grpc::Method<global::BlogGrpc.GetBlogByIdRequest, global::BlogGrpc.GetBlogByIdResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBlogById",
+        __Marshaller_blog_GetBlogByIdRequest,
+        __Marshaller_blog_GetBlogByIdResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +104,12 @@ namespace BlogGrpc {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::BlogGrpc.GetBlogByIdResponse> GetBlogById(global::BlogGrpc.GetBlogByIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -101,7 +119,8 @@ namespace BlogGrpc {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateBlog, serviceImpl.CreateBlog)
-          .AddMethod(__Method_ListBlog, serviceImpl.ListBlog).Build();
+          .AddMethod(__Method_ListBlog, serviceImpl.ListBlog)
+          .AddMethod(__Method_GetBlogById, serviceImpl.GetBlogById).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -113,6 +132,7 @@ namespace BlogGrpc {
     {
       serviceBinder.AddMethod(__Method_CreateBlog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.CreateBlogRequest, global::BlogGrpc.CreateBlogResponse>(serviceImpl.CreateBlog));
       serviceBinder.AddMethod(__Method_ListBlog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.getAllRequest, global::BlogGrpc.getAllResponse>(serviceImpl.ListBlog));
+      serviceBinder.AddMethod(__Method_GetBlogById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::BlogGrpc.GetBlogByIdRequest, global::BlogGrpc.GetBlogByIdResponse>(serviceImpl.GetBlogById));
     }
 
   }

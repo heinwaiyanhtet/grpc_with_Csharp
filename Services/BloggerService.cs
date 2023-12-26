@@ -62,5 +62,32 @@ public class BloggerService : Blogger.BloggerBase
         return response;        
     }
 
+    public override async Task<GetBlogByIdResponse> GetBlogById (GetBlogByIdRequest request,ServerCallContext context)
+    {
+        var blog = await _db.Blogs.FindAsync(request.Id);
+        
+        if(blog == null)
+        {
+            throw new RpcException(new Status(StatusCode.NotFound,$"Blog with ID {request.Id} not found"));
+        }
+
+        var blogInfo = new BlogInfo
+        {
+            Title = blog.Title,
+            Author = blog.Author,
+            ImageUrl  = blog.ImageUrl,
+            Description = blog.Description
+        };
+
+        var response = new GetBlogByIdResponse
+        {
+            Blog = blogInfo,
+        };
+        
+        return response;
+
+    }
+
+
 
 }

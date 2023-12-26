@@ -6,8 +6,8 @@ package blog;
 service Blogger {
 
     rpc CreateBlog(CreateBlogRequest) returns (CreateBlogResponse);
-
     rpc ListBlog(getAllRequest) returns (getAllResponse);
+    rpc GetBlogById(GetBlogByIdRequest) returns (GetBlogByIdResponse);
 
 }
 
@@ -35,4 +35,14 @@ message BlogInfo
     string Description = 2;
     string ImageUrl = 3;
     string Author = 4;
+}
+
+message GetBlogByIdRequest
+{
+    int32 Id = 1;
+}
+
+message GetBlogByIdResponse
+{
+    BlogInfo Blog = 1;
 }
